@@ -77,7 +77,12 @@ for value in df.columns[1 : 6]:
 
 
 # %%
+### We check if the transformation was successful by printing the modified DataFrame.
+df
 
+
+# %%
+We could use 0 instead of np.nan to transform values to INT.
 
 # %% [markdown]
 # ### We will use SimpleImputer from scikit-learn to fill out NaN values with the row's mean, so that we have all the data we need to predict the 2020's revenue using a Linear Regression.
@@ -103,9 +108,5 @@ df_process = mean_imputer.fit_transform(df_process[1:, 1:10])
 # mean_imputer = mean_imputer.fit(df_process[1:, 1:10])
 # df_process = mean_imputer.transform(df_process[1:, 1:10])
 # df_process
-
-
-# %%
-df_process
 
 
